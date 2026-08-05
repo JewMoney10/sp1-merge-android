@@ -26,10 +26,11 @@ backgrounded, with a Cancel option that cleans up the partial output file.
 
 ## Building
 
-Written for [AIDE Pro](https://www.android-ide.com/) — no Gradle project
-files here, just the Java sources and manifest under `app/src/main/`. Create
-a new AIDE Pro project with package `com.joshua.sp1merge`, drop these files
-into the matching folders, and build.
+AIDE Pro generates a standard Gradle-based Android project — this repo
+includes the wrapper (`gradlew`/`gradlew.bat`) and top-level Gradle files,
+so `./gradlew assembleDebug` or opening the project in Android Studio should
+both work, in addition to building directly in AIDE Pro. Package is
+`com.joshua.sp1merge`.
 
 Needs `android:largeHeap="true"` and a declared `<service>` for
 `MergeService` in the manifest (both already present in the one here) — a
